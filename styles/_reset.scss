@@ -1,0 +1,86 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Modernes Reset 2025
+   Minimal, universell, border-box-basiert
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* 1. Box-Sizing und Grundlegendes */
+:root {
+  /* Basis-Schriftgröße belassen (Browser-Standard 16px) */
+  /* Für Zugänglichkeit: Text-Größenanpassung nicht unterbinden */
+}
+html {
+  box-sizing: border-box;             /* Alle Elemente erben border-box */
+  -webkit-text-size-adjust: 100%;     /* iOS Text-Zoom korrekt halten */
+  font-family: sans-serif; /* Moderne System-Fonts */
+  line-height: 1.5;                   /* Gutes Zeilen-Rhythmus */
+  font-size: 16px;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* 2. Block-Elemente standardisieren */
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+}
+article, aside, footer, header, nav, section, main, figure {
+  display: block;
+}
+
+/* 3. Typografie-Grundlagen */
+/* Überschriften, Absätze, Listen haben keine voreingestellten Abstände */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ol, ul, dl, figure, hr {
+  margin: 0;
+}
+
+/* Listen ohne Default-Marker */
+ul[role="list"], ol[role="list"], ul, ol {
+  list-style: none;
+}
+
+/* 4. Medien und Bilder */
+img, picture, video, canvas, svg {
+  display: block;        /* Kein whitespace-Gap */
+  max-width: 100%;       /* Responsiv */
+  height: auto;
+}
+
+/* 5. Formularelemente */
+input, button, textarea, select {
+  font: inherit;               /* Einheitliche Schrift im UI */
+  color: inherit;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+  background: none;
+  cursor: pointer;
+}
+
+/* 6. Tabellen */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 7. Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* 8. Weitere moderne Defaults */
+:focus {
+  outline: 2px solid Highlight;  /* Zugängliches Fokus-Styling */
+  outline-offset: 2px;
+}
